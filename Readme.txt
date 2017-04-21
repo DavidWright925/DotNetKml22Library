@@ -1,6 +1,6 @@
 ﻿This C# Dot Net code will create Kml based on the 2.2 specification.
 
-The code was developed using Visual Studio 2013 and Dot Net 3.5.
+The code was developed using Visual Studio 2013 and Dot Net 4.0.
 
 DotNetKml22Library is the dll and DotNetKml22Library.Tests includes NUnit test cases.
 
