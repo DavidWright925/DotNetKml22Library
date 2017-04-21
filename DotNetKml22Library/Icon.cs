@@ -23,7 +23,8 @@ namespace DotNetKml22Library
 		/// <param name="href"></param>
 		public Icon(string href)
 		{
-			Check.Argument(!string.IsNullOrEmpty(href), "href");
+			if (string.IsNullOrWhiteSpace(href))
+				throw new ArgumentException("href is null or white space", "href");
 			_href = href;
 		}
 
