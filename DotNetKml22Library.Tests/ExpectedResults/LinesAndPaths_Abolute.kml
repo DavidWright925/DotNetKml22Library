@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>KmlFile</name>
+    <Style id="transPurpleLineGreenPoly">
+      <LineStyle>
+        <color>7fff00ff</color>
+        <width>4</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>7f00ff00</color>
+      </PolyStyle>
+    </Style>
+    <Placemark>
+      <name>Absolute</name>
+      <description>Transparent purple line</description>
+      <styleUrl>#transPurpleLineGreenPoly</styleUrl>
+      <LineString>
+        <tessellate>1</tessellate>
+        <altitudeMode>absolute</altitudeMode>
+        <coordinates>-112.265654928602,36.0944767260255,2357 -112.266038452824,36.0934260883867,2357 -112.266813901345,36.0925105877688,2357 -112.267782683444,36.09189827358,2357 -112.268855751095,36.0913137941187,2357 -112.269481071722,36.0903677207521,2357 -112.269526855561,36.0893217148729,2357 -112.269014456728,36.0885091606047,2357 -112.268152881534,36.0875381359796,2357 -112.267058817603,36.0868268526257,2357 -112.265737458732,36.086463123013,2357</coordinates>
+      </LineString>
+    </Placemark>
+  </Document>
+</kml>

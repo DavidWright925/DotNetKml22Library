@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>KmlFile</name>
+    <Style id="transBluePoly">
+      <LineStyle>
+        <width>1.5</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>7dff0000</color>
+      </PolyStyle>
+    </Style>
+    <Placemark>
+      <name>Absolute</name>
+      <styleUrl>#transBluePoly</styleUrl>
+      <Polygon>
+        <tessellate>1</tessellate>
+        <altitudeMode>absolute</altitudeMode>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>-112.337251073129,36.1488850510532,1784 -112.33561286884,36.1478154058902,1784 -112.336816937105,36.1465867773438,1784 -112.338440845754,36.1476277891408,1784 -112.337251073129,36.1488850510532,1784</coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+  </Document>
+</kml>

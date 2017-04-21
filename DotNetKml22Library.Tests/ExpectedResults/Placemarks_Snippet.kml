@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <Placemark>
+      <name>Snippet 1</name>
+      <description>This is a description.  This is a description.  This is a description.  This is a description.  </description>
+    </Placemark>
+    <Placemark>
+      <name>Snippet 2</name>
+      <Snippet maxLines="2">This is a snippet, This is a snippet, This is a snippet, This is a snippet</Snippet>
+      <description>This is a description.  This is a description.  This is a description.  This is a description.  </description>
+    </Placemark>
+    <Placemark>
+      <name>Snippet 3</name>
+      <Snippet maxLines="1">This is a snippet, This is a snippet, This is a snippet, This is a snippet</Snippet>
+      <description>This is a description.  This is a description.  This is a description.  This is a description.  </description>
+    </Placemark>
+  </Document>
+</kml>

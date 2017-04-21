@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <Placemark>
+      <name>displayMode=default</name>
+      <description>Hello, World!</description>
+      <Style>
+        <BalloonStyle />
+      </Style>
+      <Point>
+        <coordinates>-122.001,37</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>displayMode=hide</name>
+      <description>Hello, World!</description>
+      <Style>
+        <BalloonStyle>
+          <displayMode>hide</displayMode>
+        </BalloonStyle>
+      </Style>
+      <Point>
+        <coordinates>-122.001,37.001</coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>

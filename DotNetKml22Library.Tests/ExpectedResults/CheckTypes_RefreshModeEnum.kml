@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>RefreshModeEnum</name>
+    <NetworkLink>
+      <Link />
+    </NetworkLink>
+    <NetworkLink>
+      <Link>
+        <refreshMode>onExpire</refreshMode>
+      </Link>
+    </NetworkLink>
+    <NetworkLink>
+      <Link>
+        <refreshMode>onInterval</refreshMode>
+      </Link>
+    </NetworkLink>
+  </Document>
+</kml>

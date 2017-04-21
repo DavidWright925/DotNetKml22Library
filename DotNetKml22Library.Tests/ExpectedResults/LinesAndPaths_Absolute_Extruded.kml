@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>KmlFile</name>
+    <Style id="yellowLineGreenPoly">
+      <LineStyle>
+        <color>7f00ffff</color>
+        <width>4</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>7f00ff00</color>
+      </PolyStyle>
+    </Style>
+    <Placemark>
+      <name>Absolute Extruded</name>
+      <description>Transparent green wall with yellow outlines</description>
+      <styleUrl>#yellowLineGreenPoly</styleUrl>
+      <LineString>
+        <extrude>1</extrude>
+        <tessellate>1</tessellate>
+        <altitudeMode>absolute</altitudeMode>
+        <coordinates>-112.255078533779,36.0795495214565,2357 -112.254927703974,36.0811708349212,2357 -112.255250506906,36.0826076130728,2357 -112.256454015838,36.0839566058851,2357 -112.258023897645,36.0851140104481,2357 -112.259521848902,36.0858435523939,2357 -112.260821634755,36.0861263454859,2357 -112.262073428656,36.0862601908515,2357 -112.26332049285,36.0862151986009,2357 -112.264496384644,36.0862789794527,2357 -112.265696955459,36.0864959909064,2357</coordinates>
+      </LineString>
+    </Placemark>
+  </Document>
+</kml>

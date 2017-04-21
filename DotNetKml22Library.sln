@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetKml22Library", "DotNetKml22Library\DotNetKml22Library.csproj", "{B66C4704-E69C-47B9-94FA-A099C9589210}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetKml22Library.Tests", "DotNetKml22Library.Tests\DotNetKml22Library.Tests.csproj", "{5FEE86CF-5197-4BCF-A5F7-BC863817DFD5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B66C4704-E69C-47B9-94FA-A099C9589210}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B66C4704-E69C-47B9-94FA-A099C9589210}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B66C4704-E69C-47B9-94FA-A099C9589210}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B66C4704-E69C-47B9-94FA-A099C9589210}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FEE86CF-5197-4BCF-A5F7-BC863817DFD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FEE86CF-5197-4BCF-A5F7-BC863817DFD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FEE86CF-5197-4BCF-A5F7-BC863817DFD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FEE86CF-5197-4BCF-A5F7-BC863817DFD5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

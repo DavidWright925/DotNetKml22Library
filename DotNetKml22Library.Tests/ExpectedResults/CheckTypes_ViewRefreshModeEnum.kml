@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>ViewRefreshModeEnum</name>
+    <NetworkLink>
+      <Link />
+    </NetworkLink>
+    <NetworkLink>
+      <Link>
+        <viewRefreshMode>onRegion</viewRefreshMode>
+      </Link>
+    </NetworkLink>
+    <NetworkLink>
+      <Link>
+        <viewRefreshMode>onRequest</viewRefreshMode>
+      </Link>
+    </NetworkLink>
+    <NetworkLink>
+      <Link>
+        <viewRefreshMode>onStop</viewRefreshMode>
+      </Link>
+    </NetworkLink>
+  </Document>
+</kml>
