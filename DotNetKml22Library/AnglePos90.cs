@@ -6,7 +6,7 @@ using System.Globalization;
 namespace DotNetKml22Library
 {
 	/// <summary>
-	/// An angle value ≥0 and ≤90
+	/// An angle value ≥ 0 and ≤ 90
 	/// </summary>
 	public struct AnglePos90
 	{

@@ -11,10 +11,13 @@ namespace DotNetKml22Library
 	/// <see cref="Feature"/>. The LookAt element positions the "camera" in relation to 
 	/// the object that is being viewed. In Google Earth, the view "flies to" this LookAt 
 	/// viewpoint when the user double-clicks an item in the Places panel or double-clicks 
-	/// an icon in the 3D viewer.
+	/// an icon in the 3D viewer. <see cref="https://developers.google.com/kml/documentation/kmlreference#lookat"/>
 	/// </summary>
 	public class LookAt : AbstractView
 	{
+		/// <summary>
+		/// Initializes a new instance of the <see cref="AbstractView"/> class.
+		/// </summary>
 		public LookAt()
 		{
 			Altitude = double.NaN;
@@ -73,23 +76,15 @@ namespace DotNetKml22Library
 		public override void WriteTo(XmlWriter writer)
 		{
 			WriteStartElement(writer, "LookAt");
-
 			writer.WriteElementString("longitude", Longitude.ToString());
-
 			writer.WriteElementString("latitude", Latitude.ToString());
-
 			if (!double.IsNaN(Altitude))
 				writer.WriteElementString("altitude", Altitude.ToString(CultureInfo.InvariantCulture));
-
 			writer.WriteElementString("heading", Heading.ToString());
-
 			writer.WriteElementString("tilt", Tilt.ToString());
-
 			Check.Argument(!double.IsNaN(Range), "Range is a required value.");
 			writer.WriteElementString("range", Range.ToString(CultureInfo.InvariantCulture));
-			
 			Kml.WriteElement(writer, AltitudeMode);
-
 			writer.WriteEndElement();
 			writer.Flush();
 		}

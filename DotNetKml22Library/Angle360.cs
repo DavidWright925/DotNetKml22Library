@@ -6,7 +6,7 @@ using System.Globalization;
 namespace DotNetKml22Library
 {
 	/// <summary>
-	/// An angle value ≥−360 and ≤360.
+	/// An angle value ≥ −360 and ≤ 360.
 	/// </summary>
 	public struct Angle360
 	{
