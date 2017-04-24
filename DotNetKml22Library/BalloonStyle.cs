@@ -11,6 +11,7 @@ namespace DotNetKml22Library
 	/// The <see cref="BgColor"/>, if specified, is used as the background color of 
 	/// the balloon. See Feature for a diagram illustrating how the 
 	/// default description balloon appears in Google Earth.
+	/// <see cref="https://developers.google.com/kml/documentation/kmlreference#balloonstyle"/>
 	/// </summary>
 	public class BalloonStyle : Object
 	{
@@ -42,11 +43,13 @@ namespace DotNetKml22Library
 
 		/// <summary>
 		/// Background color of the balloon (optional).  The default is opaque white (ffffffff).
+		/// <see cref="Color.White"/>.
 		/// </summary>
 		public Color BgColor { get; set; }
 
 		/// <summary>
 		/// Foreground color for text. The default is black (ff000000).
+		/// <see cref="Color.Black"/>.
 		/// </summary>
 		public Color TextColor { get; set; }
 
@@ -60,9 +63,9 @@ namespace DotNetKml22Library
 		public string Text { get; set; }
 
 		/// <summary>
-		/// If <see cref="DisplayMode"/> is <see cref="DisplayMode.Default"/>, Google 
+		/// If <see cref="DisplayMode"/> is <see cref="DotNetKml22Library.DisplayMode.Default"/>, Google 
 		/// Earth uses the information supplied in <see cref="Text"/> to create a balloon. 
-		/// If <see cref="DisplayMode"/> is <see cref="DisplayMode.Hide"/>, 
+		/// If <see cref="DisplayMode"/> is <see cref="DotNetKml22Library.DisplayMode.Hide"/>, 
 		/// Google Earth does not display the balloon. In Google Earth, clicking 
 		/// the List View icon for a Placemark whose balloon's <see cref="DisplayMode"/> 
 		/// is hide causes Google Earth to fly to the Placemark.
@@ -76,22 +79,16 @@ namespace DotNetKml22Library
 		public override void WriteTo(XmlWriter writer)
 		{
 			WriteStartElement(writer, "BalloonStyle");
-
 			Color bgColor = BgColor;
 			if (bgColor != null && bgColor != Color.White)
 				writer.WriteElementString("bgColor", string.Format(CultureInfo.InvariantCulture, "{0}", bgColor));
-
 			Color textColor = TextColor;
 			if (textColor != null && textColor != Color.Black)
 				writer.WriteElementString("textColor", string.Format(CultureInfo.InvariantCulture, "{0}", textColor));
-
 			Kml.WriteElement(writer, "text", Text);
-
 			if (DisplayMode != DisplayMode.Default)
 				writer.WriteElementString("displayMode", ToDisplayModeString(DisplayMode));
-
 			writer.WriteEndElement();
-
 			writer.Flush();
 		}
 	}

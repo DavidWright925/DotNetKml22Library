@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="Balloons.cs" />
     <Compile Include="CheckTypes.cs" />
+    <Compile Include="CoordinateCollection.cs" />
     <Compile Include="Generation.cs" />
     <Compile Include="LinesAndPaths.cs" />
     <Compile Include="NetworkLinks.cs" />

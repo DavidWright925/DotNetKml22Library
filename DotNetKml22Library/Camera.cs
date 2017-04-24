@@ -72,21 +72,13 @@ namespace DotNetKml22Library
 		public override void WriteTo(XmlWriter writer)
 		{
 			WriteStartElement(writer, "Camera");
-
 			writer.WriteElementString("longitude", Longitude.ToString());
-
 			writer.WriteElementString("latitude", Latitude.ToString());
-
 			writer.WriteElementString("altitude", Altitude.ToString(CultureInfo.InvariantCulture));
-
 			writer.WriteElementString("heading", Heading.ToString());
-
 			writer.WriteElementString("tilt", Tilt.ToString());
-
 			writer.WriteElementString("roll", Roll.ToString());
-
 			Kml.WriteElement(writer, AltitudeMode);
-
 			writer.WriteEndElement();
 			writer.Flush();
 		}

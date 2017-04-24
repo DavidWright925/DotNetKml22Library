@@ -9,7 +9,9 @@ namespace DotNetKml22Library
 	/// This is an abstract base class and cannot be used directly in a KML file. It 
 	/// provides the id attribute, which allows unique identification of a KML element, 
 	/// and the targetId attribute, which is used to reference objects that have 
-	/// already been loaded into Google Earth.
+	/// already been loaded into Google Earth. The id attribute must be assigned if the "Update" mechanism is to be used.
+	/// <see cref="https://developers.google.com/kml/documentation/kmlreference#object"/>
+	/// <see cref="https://developers.google.com/kml/documentation/kmlreference#update"/>
 	/// </summary>
 	public abstract class Object
 	{
@@ -20,14 +22,16 @@ namespace DotNetKml22Library
 
 		/// <summary>
 		/// Gets or sets the id attribute, which allows unique identification 
-		/// of a KML element.
+		/// of a KML element. The id attribute must be assigned if the "Update" mechanism is to be used.
+		/// <see cref="https://developers.google.com/kml/documentation/kmlreference#update"/>
 		/// </summary>
 		public string Id { get; set; }
 
 		/// <summary>
 		/// Gets or sets the targetId attribute, which is used to reference objects 
 		/// that have already been loaded into Google Earth. The id attribute must 
-		/// be assigned if the <see cref="Update"/> mechanism is to be used. 
+		/// be assigned if the "Update" mechanism is to be used. 
+		/// <see cref="https://developers.google.com/kml/documentation/kmlreference#update"/>
 		/// </summary>
 		public string TargetId { get; set; }
 
