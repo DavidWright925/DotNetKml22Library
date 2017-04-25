@@ -131,7 +131,9 @@ namespace DotNetKml22Library.Tests
 					AltitudeMode = AltitudeMode.RelativeToGround,
 				};
 
+				string styleId = "downArrowIcon";
 				Style style = new Style();
+				style.Id = styleId;
 				style.IconStyle = new IconStyle();
 				style.IconStyle.Icon = new Icon("http://maps.google.com/mapfiles/kml/pal4/icon28.png");
 
@@ -141,6 +143,7 @@ namespace DotNetKml22Library.Tests
 					Description = "Floats a defined distance above the ground.",
 					Geometry = new Point(-122.084075, 37.4220033612141, 50) { AltitudeMode = AltitudeMode.RelativeToGround },
 					AbstractView = lookAt,
+					StyleUrl = string.Format("#{0}", styleId),
 				};
 				feature.StyleSelectors.Add(style);
 

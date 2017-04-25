@@ -12,7 +12,8 @@
       <range>100</range>
       <altitudeMode>relativeToGround</altitudeMode>
     </LookAt>
-    <Style>
+    <styleUrl>#downArrowIcon</styleUrl>
+    <Style id="downArrowIcon">
       <IconStyle>
         <Icon>
           <href>http://maps.google.com/mapfiles/kml/pal4/icon28.png</href>
