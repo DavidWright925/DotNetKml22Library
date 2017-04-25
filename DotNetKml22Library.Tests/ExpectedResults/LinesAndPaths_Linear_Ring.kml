@@ -5,7 +5,7 @@
     <description><![CDATA[If the <tessellate> tag has a value of 1, the line will contour to the underlying terrain]]></description>
     <LinearRing>
       <tessellate>1</tessellate>
-      <coordinates>-112.081423783034,36.1067787047714,0 -112.087026775269,36.0905099328766,0 -112.082026775269,36.0905099328766,0 -112.081423783034,36.1067787047714,0</coordinates>
+      <coordinates>-112.081423783035,36.1067787047714,0 -112.087026775269,36.0905099328766,0 -112.082026775269,36.0905099328766,0 -112.081423783035,36.1067787047714,0</coordinates>
     </LinearRing>
   </Placemark>
 </kml>

@@ -291,7 +291,10 @@ namespace DotNetKml22Library
 		{
 			writer.WriteStartDocument();
 			writer.WriteStartElement("kml", "http://www.opengis.net/kml/2.2");
+			//NOTE THAT THE NAMESPACE ORDER IN THE GENERATED KML/XML IS NOT RELEVENT... THEY CAN BE IN ANY ORDER!
 			//writer.WriteAttributeString("xmlns", "gx", null, "http://www.google.com/kml/ext/2.2");
+			//writer.WriteAttributeString("xmlns", "kml", null, "http://www.opengis.net/kml/2.2");
+			//writer.WriteAttributeString("xmlns", "atom", null, "http://www.w3.org/2005/Atom");
 
 			if (!string.IsNullOrEmpty(Hint))
 				writer.WriteAttributeString("hint", Hint);
