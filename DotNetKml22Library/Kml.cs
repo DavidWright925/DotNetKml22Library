@@ -7,9 +7,9 @@ using Ionic.Zip;
 using System.Globalization;
 
 //
-// http://code.google.com/apis/kml/documentation/kmlreference.html
+// http://code.google.com/apis/KML/documentation/kmlreference.html
 //
-// http://code.google.com/apis/kml/documentation/topicsinkml.html
+// http://code.google.com/apis/KML/documentation/topicsinkml.html
 //
 
 namespace DotNetKml22Library
@@ -20,7 +20,7 @@ namespace DotNetKml22Library
 	/// is used as a signal to Google Earth to display the file as celestial data.
 	/// <see cref="Kml"/> can contains 0 or 1 <see cref="Feature"/>
 	/// and 0 or 1 <see cref="NetworkLinkControl"/>. 
-	/// <a href="http://code.google.com/apis/kml/documentation/kmlreference.html">Kml reference</a>
+	/// <a href="http://code.google.com/apis/KML/documentation/kmlreference.html">Kml reference</a>
 	/// </summary>
 	public class Kml : IDisposable
 	{
@@ -199,30 +199,41 @@ namespace DotNetKml22Library
 		/// </summary>
 		public Feature Feature { get; set; }
 
+		/// <summary>
+		/// Type of stream. <see cref="KML"/> or <see cref="KMZ"/>.
+		/// </summary>
 		public enum StreamType
 		{
 			/// <summary>
-			/// A KML file.
+			/// A KML stream. KML is Keyhole Markup Language.
 			/// </summary>
-			kml, 
+			KML, 
 
 			/// <summary>
-			/// A KML file zipped up to be a KMZ.
+			/// A <see cref="KML"/> stream zipped up to be KMZ. A KMZ file consists of a main KML 
+			/// file and zero or more supporting files that are packaged using a Zip utility into one 
+			/// unit, called an archive. When the KMZ file is unzipped, the main .kml file and its 
+			/// supporting files are separated into their original formats and directory structure, 
+			/// with their original filenames and extensions. In addition to being an archive format, 
+			/// the Zip format is also compressed, so an archive can include only a single large KML 
+			/// file. Depending on the content of the KML file, this process typically results in 10:1 
+			/// compression. Your 10 Kbyte KML file can be served with a 1 Kbyte KMZ file.
+			/// <see cref="https://developers.google.com/kml/documentation/kmzarchives"/>
 			/// </summary>
-			kmz,
+			KMZ,
 		}
 
 		/// <summary>
-		/// Creates a kml file with the given <paramref name="fileName"/>
+		/// Creates a KML file with the given <paramref name="fileName"/>
 		/// </summary>
 		/// <param name="fileName"></param>
 		public void WriteTo(string fileName)
 		{
-			WriteTo(fileName, StreamType.kml);
+			WriteTo(fileName, StreamType.KML);
 		}
 
 		/// <summary>
-		/// Creates a kml or a kmz file with the given <paramref name="fileName"/>
+		/// Creates a KML or a KMZ file with the given <paramref name="fileName"/>
 		/// </summary>
 		/// <param name="fileName">The name of the file to create.</param>
 		/// <param name="streamType"></param>
@@ -230,16 +241,16 @@ namespace DotNetKml22Library
 		{
 			switch (streamType)
 			{
-				case StreamType.kml:
+				case StreamType.KML:
 					using (FileStream stream = new FileStream(fileName, FileMode.Create))
 					{
-						WriteTo(stream, StreamType.kml);
+						WriteTo(stream, StreamType.KML);
 					}
 					return;
-				case StreamType.kmz:
+				case StreamType.KMZ:
 					using (MemoryStream memoryStream = new MemoryStream())
 					{
-						WriteTo(memoryStream, StreamType.kml);
+						WriteTo(memoryStream, StreamType.KML);
 						memoryStream.Seek(0, SeekOrigin.Begin);
 						WriteToZip(memoryStream, "doc.kml", fileName);
 					}
@@ -250,18 +261,18 @@ namespace DotNetKml22Library
 		}
 
 		/// <summary>
-		/// Writes this <see cref="Kml"/> as kml (pain text) to the specified <paramref name="stream"/>
+		/// Writes this <see cref="Kml"/> as KML (pain text) to the specified <paramref name="stream"/>
 		/// </summary>
 		/// <param name="stream"></param>
 		public void WriteTo(Stream stream)
 		{
-			WriteTo(stream, StreamType.kml);
+			WriteTo(stream, StreamType.KML);
 		}
 
 		/// <summary>
-		/// Writes this <see cref="Kml"/> as kml (pain text) or
-		/// kmz (compressed kml) to the specified <paramref name="stream"/>
-		/// depending on <paramref name="streamtype"/>
+		/// Writes this <see cref="Kml"/> as KML (pain text) or
+		/// KMZ (compressed KML) to the specified <paramref name="stream"/>
+		/// depending on <paramref name="streamType"/>
 		/// </summary>
 		/// <param name="stream"></param>
 		/// <param name="streamType"></param>
@@ -269,10 +280,10 @@ namespace DotNetKml22Library
 		{
 			switch (streamType)
 			{
-				case StreamType.kml:
+				case StreamType.KML:
 					WriteTo(XmlWriter.Create(stream, XmlWriterSettings));
 					return;
-				case StreamType.kmz:
+				case StreamType.KMZ:
 					using (MemoryStream memoryStream = new MemoryStream())
 					{
 						WriteTo(XmlWriter.Create(memoryStream, XmlWriterSettings));
@@ -286,14 +297,17 @@ namespace DotNetKml22Library
 
 		}
 
-		/// <include file='Documentation.xml' path='MyDocs/MyMembers[@name="WriteTo"]/*' />
+		/// <summary>
+		/// Writes this <see cref="Document"/> to <paramref name="writer"/>.
+		/// </summary>
+		/// <param name="writer">The <see cref="XmlWriter"> to write this <see cref="Kml"/>.</see></param>
 		public void WriteTo(XmlWriter writer)
 		{
 			writer.WriteStartDocument();
 			writer.WriteStartElement("kml", "http://www.opengis.net/kml/2.2");
 			//NOTE THAT THE NAMESPACE ORDER IN THE GENERATED KML/XML IS NOT RELEVENT... THEY CAN BE IN ANY ORDER!
-			//writer.WriteAttributeString("xmlns", "gx", null, "http://www.google.com/kml/ext/2.2");
-			//writer.WriteAttributeString("xmlns", "kml", null, "http://www.opengis.net/kml/2.2");
+			//writer.WriteAttributeString("xmlns", "gx", null, "http://www.google.com/KML/ext/2.2");
+			//writer.WriteAttributeString("xmlns", "KML", null, "http://www.opengis.net/KML/2.2");
 			//writer.WriteAttributeString("xmlns", "atom", null, "http://www.w3.org/2005/Atom");
 
 			if (!string.IsNullOrEmpty(Hint))

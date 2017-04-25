@@ -27,7 +27,7 @@ namespace DotNetKml22Library.Tests
 			using (Kml kml = new Kml())
 			{
 				kml.Feature = new Placemark() { Name = fileName, Geometry = new Point() };
-				kml.WriteTo(fileName, Kml.StreamType.kmz);
+				kml.WriteTo(fileName, Kml.StreamType.KMZ);
 			}
 		}
 
@@ -54,7 +54,7 @@ namespace DotNetKml22Library.Tests
 				kml.Feature = new Placemark() { Name = fileName, Geometry = new Point() };
 				using (Stream stream = new FileStream(fileName, FileMode.Create))
 				{
-					kml.WriteTo(stream, Kml.StreamType.kmz);
+					kml.WriteTo(stream, Kml.StreamType.KMZ);
 				}
 			}
 		}
