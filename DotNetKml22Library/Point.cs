@@ -126,16 +126,11 @@ namespace DotNetKml22Library
 		public override void WriteTo(XmlWriter writer)
 		{
 			WriteStartElement(writer, "Point");
-
 			if (Extrude)
-				writer.WriteElementString("extrude", Extrude ? "1" : "0");
-
+				writer.WriteElementString("extrude", "1");
 			Kml.WriteElement(writer, AltitudeMode);
-
 			Kml.WriteElement(writer, new ICoordinate[] { this });
-
 			writer.WriteEndElement();
-
 			writer.Flush();
 		}
 

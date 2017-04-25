@@ -84,7 +84,9 @@ namespace DotNetKml22Library.Tests
 					AltitudeMode = AltitudeMode.RelativeToGround,
 				};
 
+				string styleId = "globeIcon";
 				Style style = new Style();
+				style.Id = styleId;
 				style.IconStyle = new IconStyle()
 				{
 					Icon = new Icon("http://maps.google.com/mapfiles/kml/pal3/icon19.png")
@@ -101,6 +103,7 @@ namespace DotNetKml22Library.Tests
 					Geometry = new Point(-122.0857667006183, 37.42156927867553, 50) 
 						{ AltitudeMode = AltitudeMode.RelativeToGround, Extrude = true },
 					AbstractView = lookAt,
+					StyleUrl = string.Format("#{0}", styleId),
 				};
 				feature.StyleSelectors.Add(style);
 
