@@ -84,87 +84,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="ExpectedResults\Balloons_DisplayModes.kml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="ExpectedResults\CheckTypes_AltitudeModeEnum.kml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="ExpectedResults\CheckTypes_ColorStyleEnum.kml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="ExpectedResults\CheckTypes_DisplayModeEnum.kml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="ExpectedResults\CheckTypes_RefreshModeEnum.kml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="ExpectedResults\CheckTypes_TimeStamp.kml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="ExpectedResults\CheckTypes_ViewRefreshModeEnum.kml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="ExpectedResults\LinesAndPaths_Abolute.kml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="ExpectedResults\LinesAndPaths_Absolute_Extruded.kml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="ExpectedResults\LinesAndPaths_Linear_Ring.kml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="ExpectedResults\NetworkLinks_FlyToView.kml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="ExpectedResults\NetworkLinks_MultipleInstances.kml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="ExpectedResults\NetworkLinks_Simple.kml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="ExpectedResults\NetworkLinks_TargetsSimple.kml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="ExpectedResults\NetworkLinks_TargetsWithLookAt.kml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="ExpectedResults\Placemarks_Address.kml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="ExpectedResults\Placemarks_DescriptiveHtml.kml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="ExpectedResults\Placemarks_EmptyDocument.kml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="ExpectedResults\Placemarks_Extruded.kml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="ExpectedResults\Placemarks_Floating.kml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="ExpectedResults\Placemarks_NewYorkCity.kml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="ExpectedResults\Placemarks_Simple.kml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="ExpectedResults\Placemarks_Snippet.kml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="ExpectedResults\Polygons_Absolute.kml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="ExpectedResults\ScreenOverlays_AbsoluteTopLeft.kml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="ExpectedResults\ScreenOverlays_Crosshairs.kml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="ExpectedResults\ScreenOverlays_DynamicRight.kml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <None Include="ExpectedResults\Balloons_DisplayModes.kml" />
+    <None Include="ExpectedResults\CheckTypes_AltitudeModeEnum.kml" />
+    <None Include="ExpectedResults\CheckTypes_ColorStyleEnum.kml" />
+    <None Include="ExpectedResults\CheckTypes_DisplayModeEnum.kml" />
+    <None Include="ExpectedResults\CheckTypes_RefreshModeEnum.kml" />
+    <None Include="ExpectedResults\CheckTypes_TimeStamp.kml" />
+    <None Include="ExpectedResults\CheckTypes_ViewRefreshModeEnum.kml" />
+    <None Include="ExpectedResults\LinesAndPaths_Abolute.kml" />
+    <None Include="ExpectedResults\LinesAndPaths_Absolute_Extruded.kml" />
+    <None Include="ExpectedResults\LinesAndPaths_Linear_Ring.kml" />
+    <None Include="ExpectedResults\NetworkLinks_FlyToView.kml" />
+    <None Include="ExpectedResults\NetworkLinks_MultipleInstances.kml" />
+    <None Include="ExpectedResults\NetworkLinks_Simple.kml" />
+    <None Include="ExpectedResults\NetworkLinks_TargetsSimple.kml" />
+    <None Include="ExpectedResults\NetworkLinks_TargetsWithLookAt.kml" />
+    <None Include="ExpectedResults\Placemarks_Address.kml" />
+    <None Include="ExpectedResults\Placemarks_DescriptiveHtml.kml" />
+    <None Include="ExpectedResults\Placemarks_EmptyDocument.kml" />
+    <None Include="ExpectedResults\Placemarks_Extruded.kml" />
+    <None Include="ExpectedResults\Placemarks_Floating.kml" />
+    <None Include="ExpectedResults\Placemarks_NewYorkCity.kml" />
+    <None Include="ExpectedResults\Placemarks_Simple.kml" />
+    <None Include="ExpectedResults\Placemarks_Snippet.kml" />
+    <None Include="ExpectedResults\Polygons_Absolute.kml" />
+    <None Include="ExpectedResults\ScreenOverlays_AbsoluteTopLeft.kml" />
+    <None Include="ExpectedResults\ScreenOverlays_Crosshairs.kml" />
+    <None Include="ExpectedResults\ScreenOverlays_DynamicRight.kml" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
