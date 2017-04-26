@@ -66,6 +66,7 @@
     <Compile Include="CheckTypes.cs" />
     <Compile Include="CoordinateCollection.cs" />
     <Compile Include="Generation.cs" />
+    <Compile Include="KmlSamples.cs" />
     <Compile Include="LinesAndPaths.cs" />
     <Compile Include="NetworkLinks.cs" />
     <Compile Include="Placemarks.cs" />
@@ -91,6 +92,7 @@
     <None Include="ExpectedResults\CheckTypes_RefreshModeEnum.kml" />
     <None Include="ExpectedResults\CheckTypes_TimeStamp.kml" />
     <None Include="ExpectedResults\CheckTypes_ViewRefreshModeEnum.kml" />
+    <None Include="ExpectedResults\KmlSamples_Create.kml" />
     <None Include="ExpectedResults\LinesAndPaths_Abolute.kml" />
     <None Include="ExpectedResults\LinesAndPaths_Absolute_Extruded.kml" />
     <None Include="ExpectedResults\LinesAndPaths_Linear_Ring.kml" />

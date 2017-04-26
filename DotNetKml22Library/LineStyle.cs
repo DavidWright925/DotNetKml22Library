@@ -18,16 +18,17 @@ namespace DotNetKml22Library
 		/// </summary>
 		public double Width { get; set; }
 
+		/// <summary>
+		/// Writes this <see cref="Document"/> to <paramref name="writer"/>.
+		/// </summary>
+		/// <param name="writer">The <see cref="XmlWriter"> to write this <see cref="Document"/>.</see></param>
 		public override void WriteTo(XmlWriter writer)
 		{
 			WriteStartElement(writer, "LineStyle");
-
 			base.WriteTo(writer);
-
-			writer.WriteElementString("width", Width.ToString(CultureInfo.InvariantCulture));
-
+			if (Width > 0)
+				writer.WriteElementString("width", Width.ToString(CultureInfo.InvariantCulture));
 			writer.WriteEndElement();
-
 			writer.Flush();
 		}
 	}
