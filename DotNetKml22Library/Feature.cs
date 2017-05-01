@@ -109,21 +109,20 @@ namespace DotNetKml22Library
 		/// </summary>
 		public Region Region { get; set; }
 
-		/// <include file='Documentation.xml' path='MyDocs/MyMembers[@name="WriteTo"]/*' />
+		/// <summary>
+		/// Writes this <see cref="LinearRing"/> to <paramref name="writer"/>.
+		/// </summary>
+		/// <param name="writer">A <see cref="XmlWriter"/> to write this object.</param>
 		public override void WriteTo(XmlWriter writer)
 		{
 
 			Kml.WriteElement(writer, "name", Name);
-
 			if (Open)
 				writer.WriteElementString("open", "1");			//only write if it is not the default.
-
 			if (!Visibility)
-				writer.WriteElementString("visibility", Visibility ? "1" : "0");
-
+				writer.WriteElementString("visibility", "1");
 			if (!string.IsNullOrEmpty(Address))
 				writer.WriteElementString("address", Address);
-
 			if (!string.IsNullOrEmpty(Snippet))
 			{
 				writer.WriteStartElement("Snippet");
@@ -131,17 +130,12 @@ namespace DotNetKml22Library
 				writer.WriteString(Snippet);
 				writer.WriteEndElement();
 			}
-
 			Kml.WriteElement(writer, "description", Description);
-
 			if (AbstractView != null)
 				AbstractView.WriteTo(writer);
-
 			if (TimePrimative != null)
 				TimePrimative.WriteTo(writer);
-
 			Kml.WriteElement(writer, "styleUrl", StyleUrl);
-
 			if (_styleSelector != null)
 			{
 				foreach (StyleSelector selector in _styleSelector)
@@ -150,7 +144,6 @@ namespace DotNetKml22Library
 
 			if (Region != null)
 				Region.WriteTo(writer);
-
 			writer.Flush();
 		}
 	}

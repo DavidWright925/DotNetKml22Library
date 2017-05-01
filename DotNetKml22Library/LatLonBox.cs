@@ -36,20 +36,18 @@ namespace DotNetKml22Library
 		/// </summary>
 		public Angle180 Rotation { get; set; }
 
+		/// <summary>
+		/// Writes this <see cref="LinearRing"/> to <paramref name="writer"/>.
+		/// </summary>
+		/// <param name="writer">A <see cref="XmlWriter"/> to write this object.</param>
 		public override void WriteTo(XmlWriter writer)
 		{
 			WriteStartElement(writer, "LatLonBox");
-
 			writer.WriteElementString("north", North.Value.ToString(CultureInfo.InvariantCulture));
-
 			writer.WriteElementString("south", South.Value.ToString(CultureInfo.InvariantCulture));
-
 			writer.WriteElementString("east", East.Value.ToString(CultureInfo.InvariantCulture));
-
 			writer.WriteElementString("west", West.Value.ToString(CultureInfo.InvariantCulture));
-
 			writer.WriteElementString("rotation", Rotation.Value.ToString(CultureInfo.InvariantCulture));
-
 			writer.WriteEndElement();
 			writer.Flush();
 		}

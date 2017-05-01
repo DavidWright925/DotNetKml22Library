@@ -50,17 +50,13 @@ namespace DotNetKml22Library
 		public override void WriteTo(XmlWriter writer)
 		{
 			base.WriteTo(writer);
-
 			Color color = Color;
 			if (color != null && color != DefaultColor)
 				Kml.WriteElement(writer, "color", string.Format(CultureInfo.InvariantCulture, "{0}", color));
-
 			if (DrawOrder != 0)
 				writer.WriteElementString("drawOrder", string.Format(CultureInfo.InvariantCulture, "{0}", DrawOrder));
-
 			if (Icon != null)
 				Icon.WriteTo(writer);
-
 			writer.Flush();
 		}
 	}

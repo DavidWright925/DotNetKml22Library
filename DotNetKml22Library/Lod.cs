@@ -48,15 +48,17 @@ namespace DotNetKml22Library
 		/// </summary>
 		public double MaxFadeExtent { get; set; }
 
+		/// <summary>
+		/// Writes this <see cref="LinearRing"/> to <paramref name="writer"/>.
+		/// </summary>
+		/// <param name="writer">A <see cref="XmlWriter"/> to write this object.</param>
 		public void WriteTo(XmlWriter writer)
 		{
 			writer.WriteStartElement("Lod");
-
 			writer.WriteElementString("minLodPixels", MinLodPixels.ToString(CultureInfo.InvariantCulture));
 			writer.WriteElementString("maxLodPixels", MaxLodPixels.ToString(CultureInfo.InvariantCulture));
 			writer.WriteElementString("minFadeExtent", MinFadeExtent.ToString(CultureInfo.InvariantCulture));
 			writer.WriteElementString("maxFadeExtent", MaxFadeExtent.ToString(CultureInfo.InvariantCulture));
-
 			writer.WriteEndElement();
 			writer.Flush();
 		}

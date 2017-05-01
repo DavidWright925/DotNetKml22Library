@@ -49,26 +49,20 @@ namespace DotNetKml22Library
 		public Icon Icon { get; set; }
 
 		/// <summary>
-		/// 
+		/// Writes this <see cref="LinearRing"/> to <paramref name="writer"/>.
 		/// </summary>
-		/// <param name="writer"></param>
+		/// <param name="writer">A <see cref="XmlWriter"/> to write this object.</param>
 		public override void WriteTo(XmlWriter writer)
 		{
 			WriteStartElement(writer, "IconStyle");
-
 			base.WriteTo(writer);
-
 			if (Scale != 1)
 				Kml.WriteElement(writer, "scale", Scale.ToString(CultureInfo.InvariantCulture));
-
 			if (Heading != 0)
 				Kml.WriteElement(writer, "heading", Heading.ToString(CultureInfo.InvariantCulture));
-
 			if (Icon != null)
 				Icon.WriteTo(writer);
-
 			writer.WriteEndElement();
-
 			writer.Flush();
 		}
 	}

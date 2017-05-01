@@ -42,21 +42,20 @@ namespace DotNetKml22Library
 		/// </summary>
 		public AbstractView AbstractView { get; set; }
 
+		/// <summary>
+		/// Writes this object to <paramref name="writer"/>.
+		/// </summary>
+		/// <param name="writer">A <see cref="XmlWriter"/> to write this object.</param>
 		public virtual void WriteTo(XmlWriter writer)
 		{
 			writer.WriteStartElement("NetworkLinkControl");
-
 			if (!double.IsNaN(MinRefreshPeriod))
 				writer.WriteElementString("minRefreshPeriod", 
 					string.Format(CultureInfo.InvariantCulture, "{0}", MinRefreshPeriod));
-
 			Kml.WriteElement(writer, "message", Message);
-
 			if (AbstractView != null)
 				AbstractView.WriteTo(writer);
-
 			writer.WriteEndElement();
-
 			writer.Flush();
 		}
 	}

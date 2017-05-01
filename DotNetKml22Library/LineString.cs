@@ -30,23 +30,21 @@ namespace DotNetKml22Library
 
 		public IEnumerable<ICoordinate> Coordinates { get; set; }
 
+		/// <summary>
+		/// Writes this <see cref="LinearRing"/> to <paramref name="writer"/>.
+		/// </summary>
+		/// <param name="writer">A <see cref="XmlWriter"/> to write this object.</param>
 		public override void WriteTo(XmlWriter writer)
 		{
 			WriteStartElement(writer, "LineString");
-
 			if (Extrude)
-				writer.WriteElementString("extrude", Extrude ? "1" : "0");
-
+				writer.WriteElementString("extrude", "1");
 			if (Tessellate)
-				writer.WriteElementString("tessellate", Tessellate ? "1" : "0");
-
+				writer.WriteElementString("tessellate", "1");
 			Kml.WriteElement(writer, AltitudeMode);
-
 			if (Coordinates != null)
 				Kml.WriteElement(writer, Coordinates);
-
 			writer.WriteEndElement();
-
 			writer.Flush();
 		}
 	}

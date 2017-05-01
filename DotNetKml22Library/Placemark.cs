@@ -50,17 +50,12 @@ namespace DotNetKml22Library
 		public override void WriteTo(XmlWriter writer)
 		{
 			WriteStartElement(writer, "Placemark");
-
 			base.WriteTo(writer);
-
 			if (Geometry != null)
 				Geometry.WriteTo(writer);
-
 			if (MultiGeometry != null)
 				MultiGeometry.WriteTo(writer);
-
 			writer.WriteEndElement();
-
 			writer.Flush();
 		}
 

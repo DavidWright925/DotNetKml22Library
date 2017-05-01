@@ -10,7 +10,12 @@ namespace DotNetKml22Library
 	/// </summary>
 	public class MultiGeometry : Geometry
 	{
-		List<Geometry> _items = new List<Geometry>();
+		readonly List<Geometry> _items;
+
+		public MultiGeometry()
+		{
+			_items = new List<Geometry>();
+		}
 
 		/// <summary>
 		/// Returns a collection of Geometry items.
@@ -27,10 +32,9 @@ namespace DotNetKml22Library
 		public override void WriteTo(XmlWriter writer)
 		{
 			WriteStartElement(writer, "MultiGeometry");
-
-			foreach (Geometry item in _items)
-				item.WriteTo(writer);
-
+			if (_items != null)
+				foreach (Geometry item in _items)
+					item.WriteTo(writer);
 			writer.WriteEndElement();
 		}
 	}

@@ -49,19 +49,13 @@ namespace DotNetKml22Library
 		public override void WriteTo(XmlWriter writer)
 		{
 			WriteStartElement(writer, "LinearRing");
-
 			if (Extrude)
-				writer.WriteElementString("extrude", Extrude ? "1" : "0");
-
+				writer.WriteElementString("extrude", "1");
 			if (Tessellate)
-				writer.WriteElementString("tessellate", Tessellate ? "1" : "0");
-
+				writer.WriteElementString("tessellate", "1");
 			Kml.WriteElement(writer, AltitudeMode);
-
 			Kml.WriteElement(writer, Coordinates);
-
 			writer.WriteEndElement();
-
 			writer.Flush();
 		}
 	}

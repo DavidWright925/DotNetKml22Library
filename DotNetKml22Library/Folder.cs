@@ -19,17 +19,17 @@ namespace DotNetKml22Library
 			get { return _features; }
 		}
 
-		/// <include file='Documentation.xml' path='MyDocs/MyMembers[@name="WriteTo"]/*' />
+		/// <summary>
+		/// Writes this <see cref="LinearRing"/> to <paramref name="writer"/>.
+		/// </summary>
+		/// <param name="writer">A <see cref="XmlWriter"/> to write this object.</param>
 		public override void WriteTo(XmlWriter writer)
 		{
 			WriteStartElement(writer, "Folder");
-
 			base.WriteTo(writer);
-
 			if (_features != null)
 				foreach (Feature feature in _features)
 					feature.WriteTo(writer);
-
 			writer.WriteEndElement();
 			writer.Flush();
 		}
