@@ -21,23 +21,21 @@ namespace DotNetKml22Library
 
 		public Link Link { get; set; }
 
+		/// <summary>
+		/// Writes this object to <paramref name="writer"/>.
+		/// </summary>
+		/// <param name="writer">A <see cref="XmlWriter"/> to write this object.</param>
 		public override void WriteTo(XmlWriter writer)
 		{
 			WriteStartElement(writer, "NetworkLink");
-
 			base.WriteTo(writer);
-
 			if (RefreshVisibility)
-				writer.WriteElementString("refreshVisibility", RefreshVisibility ? "1" : "0");
-
+				writer.WriteElementString("refreshVisibility", "1");
 			if (FlyToView)
-				writer.WriteElementString("flyToView", FlyToView ? "1" : "0");
-
-			Check.Operation(Link != null, "Link must be set");
-
+				writer.WriteElementString("flyToView", "1");
+			//Check.Operation(Link != null, "Link must be set");
 			if (Link != null)
 				Link.WriteTo(writer);
-
 			writer.WriteEndElement();
 			writer.Flush();
 		}

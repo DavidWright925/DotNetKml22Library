@@ -95,24 +95,22 @@ namespace DotNetKml22Library
 		/// </summary>
 		public int ViewRefreshTime { get; set; }
 
+		/// <summary>
+		/// Writes this <see cref="LinearRing"/> to <paramref name="writer"/>.
+		/// </summary>
+		/// <param name="writer">A <see cref="XmlWriter"/> to write this object.</param>
 		public override void WriteTo(XmlWriter writer)
 		{
 			WriteStartElement(writer, "Link");
-
 			Kml.WriteElement(writer, "href", Href);
-
 			if (RefreshMode != RefreshMode.OnChange)
 				writer.WriteElementString("refreshMode", ToRefreshModeString(RefreshMode));
-
 			if (RefreshInterval > 0)
 				writer.WriteElementString("refreshInterval", RefreshInterval.ToString(CultureInfo.InvariantCulture));
-
 			if (ViewRefreshMode != ViewRefreshMode.Never)
 				writer.WriteElementString("viewRefreshMode", ToViewRefreshModeString(ViewRefreshMode));
-
 			if (ViewRefreshTime > 0)
 				writer.WriteElementString("viewRefreshTime", ViewRefreshTime.ToString(CultureInfo.InvariantCulture));
-
 			writer.WriteEndElement();
 			writer.Flush();
 		}

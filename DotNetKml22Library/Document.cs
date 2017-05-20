@@ -13,24 +13,14 @@ namespace DotNetKml22Library
 	public class Document : Container
 	{
         /// <summary>
-        /// Initialize a new instance of the <see cref="Document"/> class.
-        /// </summary>
-        public Document()
-        {
-        }
-
-        /// <summary>
         /// Writes this <see cref="Document"/> to <paramref name="writer"/>.
         /// </summary>
         /// <param name="writer">The <see cref="XmlWriter"> to write this <see cref="Document"/>.</see></param>
 		public override void WriteTo(XmlWriter writer)
 		{
 			WriteStartElement(writer, "Document");
-
 			base.WriteTo(writer);
-
 			writer.WriteEndElement();
-
 			writer.Flush();
 		}
 	}

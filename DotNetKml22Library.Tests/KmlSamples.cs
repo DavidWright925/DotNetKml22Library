@@ -13,7 +13,7 @@ namespace DotNetKml22Library.Tests
 		/// Creates KML to match that provided by Google "KML_Samples.kml" provided 
 		/// here (<see cref="https://developers.google.com/kml/documentation/kml_tut"/>).
 		/// </summary>
-		[Test]
+		//[Test]
 		public void Create()
 		{
 			Kml kml = new Kml();

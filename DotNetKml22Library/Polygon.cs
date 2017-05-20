@@ -28,31 +28,28 @@ namespace DotNetKml22Library
 			get { return _innerBoundaryIsList ?? (_innerBoundaryIsList = new List<InnerBoundaryIs>()); }
 		}
 
+		/// <summary>
+		/// Writes this object to <paramref name="writer"/>.
+		/// </summary>
+		/// <param name="writer">A <see cref="XmlWriter"/> to write this object.</param>
 		public override void WriteTo(XmlWriter writer)
 		{
 			WriteStartElement(writer, "Polygon");
-
 			if (Extrude)
-				writer.WriteElementString("extrude", Extrude ? "1" : "0");
-
+				writer.WriteElementString("extrude", "1");
 			if (Tessellate)
-				writer.WriteElementString("tessellate", Tessellate ? "1" : "0");
-
+				writer.WriteElementString("tessellate", "1");
 			Kml.WriteElement(writer, AltitudeMode);
-
 			OuterBoundaryIs outerBoundaryIs = OuterBoundaryIs;
 			Check.Operation(outerBoundaryIs != null, "OuterBoundaryIs not set");
 			if (outerBoundaryIs != null)
 				outerBoundaryIs.WriteTo(writer);
-
 			if (_innerBoundaryIsList != null)
 			{
 				foreach (InnerBoundaryIs innerBoundaryIs in _innerBoundaryIsList)
 					innerBoundaryIs.WriteTo(writer);
 			}
-
 			writer.WriteEndElement();
-
 			writer.Flush();
 		}
 	}

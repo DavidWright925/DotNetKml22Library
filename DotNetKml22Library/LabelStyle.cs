@@ -23,17 +23,17 @@ namespace DotNetKml22Library
 			set { _scale = value; }
 		}
 
+		/// <summary>
+		/// Writes this <see cref="LinearRing"/> to <paramref name="writer"/>.
+		/// </summary>
+		/// <param name="writer">A <see cref="XmlWriter"/> to write this object.</param>
 		public override void WriteTo(XmlWriter writer)
 		{
 			WriteStartElement(writer, "LabelStyle");
-
 			base.WriteTo(writer);
-
 			if (Scale != 1)
 				Kml.WriteElement(writer, "scale", Scale.ToString(CultureInfo.InvariantCulture));
-
 			writer.WriteEndElement();
-
 			writer.Flush();
 		}
 	}
