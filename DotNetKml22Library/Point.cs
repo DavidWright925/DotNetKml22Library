@@ -36,26 +36,26 @@ namespace DotNetKml22Library
 		public Point() :
 			this(0, 0, double.NaN) { }
 
-		/// <summary>
-		/// Initialize a new instance of the <see cref="Point"/> class with
-		/// <see cref="Latitude"/> set to <paramref name="latitude"/>
-		/// and <see cref="Longitude"/> set to <paramref name="longitude"/>.
-		/// </summary>
-		/// <param name="longitude">latitude ≥ −90 and ≤ 90</param>
-		/// <param name="latitude">longitude ≥ −180 and <= 180</param>
-		public Point(double longitude, double latitude) :
+        /// <summary>
+        /// Initialize a new instance of the <see cref="Point"/> class with
+        /// <see cref="Latitude"/> set to <paramref name="latitude"/>
+        /// and <see cref="Longitude"/> set to <paramref name="longitude"/>.
+        /// </summary>
+        /// <param name="longitude">latitude ≥ −90 and ≤ 90</param>
+        /// <param name="latitude">longitude ≥ −180 and ≤ 180</param>
+        public Point(double longitude, double latitude) :
 			this(longitude, latitude, double.NaN) { }
 
-		/// <summary>
-		/// Initialize a new instance of the <see cref="Point"/> class with
-		/// <see cref="Latitude"/> set to <paramref name="latitude"/>, 
-		/// <see cref="Longitude"/> set to <paramref name="longitude"/> and 
-		/// <see cref="Altitude"/> set to <paramref name="altitude"/>.
-		/// </summary>
-		/// <param name="longitude">latitude ≥ −90 and ≤ 90</param>
-		/// <param name="latitude">longitude ≥ −180 and <= 180</param>
-		/// <param name="altitude">altitude values are in meters above sea level</param>
-		public Point(double longitude, double latitude, double altitude)
+        /// <summary>
+        /// Initialize a new instance of the <see cref="Point"/> class with
+        /// <see cref="Latitude"/> set to <paramref name="latitude"/>, 
+        /// <see cref="Longitude"/> set to <paramref name="longitude"/> and 
+        /// <see cref="Altitude"/> set to <paramref name="altitude"/>.
+        /// </summary>
+        /// <param name="longitude">latitude ≥ −90 and ≤ 90</param>
+        /// <param name="latitude">longitude ≥ −180 and ≤ 180</param>
+        /// <param name="altitude">altitude values are in meters above sea level</param>
+        public Point(double longitude, double latitude, double altitude)
 		{
 			Latitude = latitude;
 			Longitude = longitude;
