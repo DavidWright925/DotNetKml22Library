@@ -8,7 +8,17 @@ namespace DotNetKml22Library.Tests
 	{
 		static void Main(string[] args)
 		{
-			new Regions().PolygonFade();
+			using (Kml kml = new Kml())
+			{
+				Placemark feature = new Placemark()
+				{
+					Name = "Simple placemark",
+					Description = "Attached to the ground. Intelligently places itself at the height of the underlying terrain.",
+					Geometry = new Point(-122.0822035425683, 37.42228990140251, 0),
+				};
+				kml.Feature = feature;
+				kml.WriteTo("simple.kml");
+			}
 		}
 	}
 }
