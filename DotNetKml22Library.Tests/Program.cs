@@ -8,6 +8,7 @@ namespace DotNetKml22Library.Tests
 	{
 		static void Main(string[] args)
 		{
+            //Creates a simple placemark.kml file
 			using (Kml kml = new Kml())
 			{
 				Placemark feature = new Placemark()
