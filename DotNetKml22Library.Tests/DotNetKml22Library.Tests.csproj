@@ -65,6 +65,7 @@
     <Compile Include="Balloons.cs" />
     <Compile Include="CheckTypes.cs" />
     <Compile Include="CoordinateCollection.cs" />
+    <Compile Include="Feature1cs.cs" />
     <Compile Include="Generation.cs" />
     <Compile Include="KmlSamples.cs" />
     <Compile Include="LinesAndPaths.cs" />
